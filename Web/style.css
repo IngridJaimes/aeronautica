@@ -1,0 +1,498 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+nav{
+    background-color: black;
+    color: white;
+    max-height: 20vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px; padding-left: 5%; padding-right: 5%;
+    position: fixed;
+    z-index: 50000;
+}
+.name{font-size: 45px;}
+.logo{height: 80px;}
+.name span{color: #E0ECE6;}
+
+nav .ver-carrito{
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+nav ul li{
+    font-family: 'Josefin Sans', sans-serif;
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 15px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    font-size: 30px;
+}
+
+nav ul li a:hover{
+    color: #C6D589;
+    transition: .3s;
+}
+
+.principal{
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+    background-color: #4C5B5D;
+    padding: 0 25%;
+}
+
+.principal-texto{ color: white; margin-top: 25%;}
+
+.principal-texto h1{
+    font-family: 'Yatra One', cursive;
+    font-size: 90px;
+    line-height: 1;
+    margin: 0 0 25px;
+}
+
+.principal span{
+    color: #B2C5B2;
+    font-size: 40px;
+    font-family: 'Indie Flower', cursive;
+}
+
+.principal-texto h4{
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-family: 'Indie Flower', cursive;
+}
+
+.principal-texto p{
+    font-size: 30px;
+    line-height: 1.9;
+    margin-bottom: 30px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.enlaces{
+    position: absolute;
+    top: 55%;
+    padding: 0 9%;
+    transform: translateY(-50%);
+}
+
+.enlaces i{
+    display: block;
+    margin: 26px 80px 30px 90px;
+    font-size: 60px;
+    color: black;
+    transition: all .50s ease;
+}
+
+.enlaces i:hover{color: #C2C4B6; transform: translateY(-5px);}
+.enlaces a{color: transparent;}
+
+.principal-img{
+    z-index: 2000;
+    margin: 4em;
+    animation: movimiento 2.5s linear infinite;
+}
+@keyframes movimiento{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(30px);
+    }
+    100%{
+            transform: translateY(0);
+    }
+}
+
+/* P A N T A L L A 2 (Auto-Typing)*/
+
+.imagenes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.imagenes img{
+    display: flex;
+    width: calc(100% / 3);
+    height: 34vh;
+}
+/* Esta es otra forma de acomodar las imágenes
+.imagenes img{
+    display: flex;
+    width: calc(100% / 3);
+    height: 100vh;
+    object-fit: cover;
+}
+*/
+
+.auto-texto{
+    position: absolute;
+    top: 130%;
+    left: 30%;
+    font-size: 9em;
+    font-family: 'Indie Flower', cursive;
+    color: white;
+}
+
+/* P A N T A L L A  3  (videos) */
+
+.yajalaporfis video{
+    position: absolute;
+    z-index: 000;
+    min-height: 100vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+.video-slide{
+    position: absolute;
+    width: 100%;
+    clip-path: circle(0% at 0 50%);
+}
+.video-slide.active{
+    clip-path: circle(150% at 0 50%);
+}
+
+.slider-navigation{
+    z-index: 1000;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50px;
+}
+
+.slider-navigation .nav-btn{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    opacity: .75;
+    cursor: crosshair;
+    transition: 0.3s ease;
+    margin-top: 5%;
+    margin-right: 23px;
+}
+.slider-navigation .nav-btn:hover{
+    transform: scale(1.3);
+}
+
+.nav-btn.active{
+    background: #6B8E4E;
+}
+
+.contenido-slide{
+    position: absolute;
+    top: 230%;
+    left: 30%;
+    right: 30%;
+    font-family: 'Yatra One', cursive;
+    font-size: 5em;
+    color: #fff;
+    display: none;
+}
+
+.contenido-slide .much{
+    font-size: 75px;
+}
+.contenido-slide.active{
+    display: block;
+}
+
+.contenido-slide span{
+    color: #1B2727;
+}
+
+/* P A N T A L L A  4 (Carrito de compras) */
+
+.shopContent{
+    background-color: #B0C99B;
+    position: absolute;
+    top: 300%;
+    height: 100vh;
+    width: 100%;
+    z-index: 000;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.shopContent h1{ /* Título: "Productos" */
+    font-size: 7em;
+    position: absolute;
+    margin: 130px 10px 10px 1em;
+    color: white;
+    left: 30%;
+    font-family: 'Indie Flower', cursive;
+}
+
+.card{
+    z-index: 60;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 320px;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 18% 5px 120px 5px;
+    font-size: 25px;
+    animation: movimiento 1.5s linear infinite;
+}
+.card img{
+    width: 90%;
+    height: 250px;
+}
+.comprar{
+    color: grey;
+    font-size: 20px;
+}
+.card button{
+    border: none;
+    box-shadow: 0 14px 18px 0 #1B2727;
+    border-radius: 100%;
+    padding: 12px;
+    color: white;
+    background-color: #1B2727;
+    text-align: center;
+    cursor: copy;
+    width: 100%;
+    font-size: 35px;
+    margin-top: 30px; margin-left: 65px; margin-right: 65px;
+}
+.card button:hover{
+    opacity: 0.7;
+}
+
+/* El siguiente código le da estilo al carrito de compras */
+.modal-container{
+    width: 80%;
+    margin: 0 10%;
+    max-height: 88vh;
+    color: #B0C99B;
+    background-color: #1B2727;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    overflow: auto;
+    z-index: 80000;
+    top: 15vh;
+    scrollbar-color: none;
+}
+
+.modal-header{
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    color: #fff;
+    width: 100%;
+}
+
+.modal-header-title{
+    justify-self: start;
+    font-family: 'Indie Flower', cursive;
+    font-size: 70px;
+}
+.modal-header-button{
+    cursor: crosshair;
+    font-size: 70px;
+    color: red;
+    font-family: 'Indie Flower', cursive;
+}
+.modal-container .modal-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin: 10px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 30px;
+}
+
+.modal-container div img{
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+}
+
+.total-content{
+    font-size: 45px;
+    padding: 30px;
+    text-align: center;
+    padding-top: 20px;
+    font-family: 'Yatra One', cursive;
+    color: #fff;
+}
+
+.pago{
+    border: none;
+    padding: 25px;
+    color: black;
+    background-color: #B0C99B;
+    text-align: center;
+    cursor: copy;
+    font-size: 10px;
+    width: 95%;
+    font-family: 'Indie Flower', cursive;
+    margin: 2%;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.delete-product{
+    font-size: 70px;
+    font-family: 'Indie Flower', cursive;
+    color: #5D7599;
+}
+
+.cantidad-carrito{
+    background-color: #6B8E4E;
+    color: white;
+    border-radius: 50%;
+    font-size: 30px;
+    padding: 4px;
+    top: 37px; right: 90px;
+    position: absolute;
+    display: none;
+}
+
+/* P A N T A L L A  5  (Pasos para cultivar tus hortalizas) */
+
+.tit5{ /* Estilos del título */
+    position: absolute;
+    font-size: 4em;
+    font-family: 'Indie Flower', cursive;
+    display: block;
+    top: 18%;
+    left: 10%;
+}
+
+.any{
+    background-color: #B0C99B;
+    width: 100%;
+    height: 100%;
+    top: 400%;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+}
+
+.p5-contenido{max-width: 850px;margin-top: 15%; margin-left: 3%;}
+.p5-contenido p{
+    font-size: 25px;
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: justify;
+}
+.p5-contenido h2{
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 35px;
+    text-align: center;
+}
+
+.p5-contenido .span-titulo{color: #FF6501;font-family: 'Yatra One', cursive;}
+.black-span{color: #6B8E4E;font-family: 'Yatra One', cursive;}
+
+.p5-imagen{
+    position: absolute;
+    width: 600px;
+    height: 650px;
+    display: flex;
+    margin-top: 8%;
+    margin-bottom: 10%;
+    margin-left: 45%;
+    justify-content: flex-end;
+}
+
+.p5-imagen img{max-width: 500px;}
+
+.iconitos{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+    right: 30%;
+    bottom: 2%;
+}
+.iconitos li{
+    list-style: none;
+    cursor: cell;
+    transition: 0.5s;
+    margin-right: 20px;
+}
+.iconitos li:hover{
+    transform: translateY(-20px);
+}
+
+.iconitos img{
+    height: 170px;
+}
+
+/* Última pantalla (contacto) */
+.contacto{
+    position: absolute;
+    top: 500%;
+    width: 100%;
+    height: 100vh;
+    background: #1B2727;
+}
+
+.contacto h1{
+    position: absolute;
+    font-size: 70px;
+    font-family: 'Indie Flower', cursive;
+    color: white;
+    top: 20%;
+    left: 20%;
+}
+
+.contacto h2{
+    position: absolute;
+    font-size: 4em;
+    font-family: 'Josefin Sans', sans-serif;
+    top: 35%; left: 2%;
+    color: #B0C99B;
+}
+
+.enlaces-contacto{
+    position: absolute;
+    top: 570%;
+    left: 22%;
+    transform: translateY(-50%);
+    display: flex;
+}
+
+.qr{
+    height: 240px;
+    margin-left: 50px;
+}
+
+.enlaces-contacto p{
+    margin-left: 90px;
+    margin-right: 20px;
+    font-size: 40px;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+
+}
+.enlaces-contacto a{color: transparent;}
