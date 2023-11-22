@@ -59,14 +59,19 @@ nav ul li a:hover{
     background-color: #B3A3BA;
     padding: 0 25%;
 }
-
-
-.principal-texto{ color: #0A0B24;}
-.principal h4 span{
-    color: #734a91;
-    font-size: 40px;
+.sin1{
+    margin-left: 85%;position: absolute;top: 80%;display: block;
+    text-decoration: none;color: #734a91;font-size: 30px;
+    font-family: 'Josefin Sans', sans-serif;font-weight: bolder;
+}
+.sin2{
+    margin-left: 85%;position: absolute;top: 88%;display: block;
+    text-decoration: none;color: black;font-size: 30px;
+    font-family: 'Josefin Sans', sans-serif;font-weight: bolder;
 }
 
+.principal-texto{ color: #0A0B24;}
+.principal span{color: #734a91;font-size: 40px;}
 .principal-texto h4{
     margin-top: 150px;
     font-size: 30px;
@@ -118,42 +123,41 @@ nav ul li a:hover{
     }
 }
 
-/* P A N T A L L A 2 (Auto-Typing)*/
+/* P A N T A L L A 2 */
 
 .imagenes{
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
-}
-
-.imagenes img{
-    display: flex;
-    width: calc(100% / 3);
-    height: 34vh;
+    width: 100%;
 }
 /* Esta es otra forma de acomodar las imágenes
+.imagenes img{display: flex;width: calc(100% / 3);height: 34vh;}*/
+
 .imagenes img{
     display: flex;
     width: calc(100% / 3);
     height: 100vh;
     object-fit: cover;
 }
-*/
+
+.pantalla5{margin-top: 89%;}
 
 /* P A N T A L L A  3  (videos) */
 
 .yajalaporfis video{
     position: absolute;
     z-index: 000;
-    min-height: 100vh;
+    height: 102vh;
+    top: 200%;
     width: 100%;
     object-fit: cover;
 }
 
 .video-slide{
     position: absolute;
-    width: 100%;
+    width: 100vh;
     clip-path: circle(0% at 0 50%);
 }
 .video-slide.active{
@@ -211,28 +215,25 @@ nav ul li a:hover{
     color: #1B2727;
 }
 
-/* P A N T A L L A  4 */
 
-.seccion3{
-    background-color: #4C5B5D;
-    position: absolute;
-    top: 300%;
-    height: 50vh;
-    width: 100%;
-    z-index: 000;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
+/* P A N T A L L A  4 */
 
 .auto-texto{
     position: static;
-    font-size: 7em;
+    font-size: 2.3em;
     font-family: 'Indie Flower', cursive;
     color: white;
+    z-index: 11000;
 }
 
-/* P A N T A L L A  5 */
+.autotxt{
+    top: 315%;
+    z-index: 11000;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
 
 .tit5{ /* Estilos del título */
     position: absolute;
@@ -244,14 +245,14 @@ nav ul li a:hover{
 .any{
     background-color: #B0C99B;
     width: 100%;
-    height: 100%;
-    top: 340%;
+    min-height: 100%;
+    top: 301%;
     position: absolute;
     display: flex;
     justify-content: space-around;
 }
 
-.p5-contenido{max-width: 850px;margin-top: 11%; margin-left: 3%;}
+.p5-contenido{max-width: 850px;margin-top: 15%; margin-left: 3%;}
 .p5-contenido p{
     font-size: 25px;
     font-family: 'Josefin Sans', sans-serif;
@@ -269,12 +270,12 @@ nav ul li a:hover{
 
 .p5-imagen{
     position: absolute;
-    width: 600px;
-    height: 650px;
+    width: 400px;
+    height: 450px;
     display: flex;
-    margin-top: 8%;
+    margin-top: 14%;
     margin-bottom: 10%;
-    margin-left: 45%;
+    margin-left: 55%;
     justify-content: flex-end;
 }
 
@@ -303,59 +304,72 @@ nav ul li a:hover{
 }
 
 /* Última pantalla (contacto) */
-.contacto{
+.comentarios{
     position: absolute;
-    top: 440%;
+    top: 498%;
     width: 100%;
-    height: 100vh;
+    height: 98vh;
     background: #1B2727;
 }
 
-.contacto h1{
+.comentarios h1{
     position: absolute;
     font-size: 70px;
     font-family: 'Indie Flower', cursive;
     color: white;
-    top: 20%;
-    left: 20%;
+    top: 8%;
+    left: 45%;
 }
 
-.contacto h2{
+.comentarios h2{
     position: absolute;
     font-size: 4em;
     font-family: 'Josefin Sans', sans-serif;
-    top: 35%; left: 2%;
+    top: 20%; left: 32%;
     color: #B0C99B;
 }
-
-.enlaces-contacto{
-    position: absolute;
-    top: 570%;
-    left: 22%;
-    transform: translateY(-50%);
-    display: flex;
-}
-
-.qr{
-    height: 240px;
-    margin-left: 50px;
-}
-
-.enlaces-contacto p{
-    margin-left: 90px;
-    margin-right: 20px;
-    font-size: 40px;
-    color: white;
+  
+.comentarios label {
+    display: block;
+    margin-top: 2%;
+    margin-left: 30%;
     font-family: 'Josefin Sans', sans-serif;
-
+    font-weight: bold;
+    font-size: 50px;
+    color: white;
 }
-.enlaces-contacto a{color: transparent;}
 
-
+.comentarios .uno{margin-top: 16%;}
+  
+.comentarios input[type="email"],
+.comentarios textarea {
+    width: 60%;
+    padding: 25px;
+    margin-right: 30%;
+    font-family: 'Josefin Sans', sans-serif;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    font-size: 30px;
+  }
+  
+  .comentarios button[type="submit"] {
+    padding: 25px 50px;
+    font-size: 30px;
+    margin-top: 2%;
+    background-color: #734a91;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 45%;
+  }
+  
+  .comentarios button[type="submit"]:hover {
+    background-color: #0A0B24;
+  }
 
 /*
 #0A0B24
 #4C5B5D
-
-
-*/
